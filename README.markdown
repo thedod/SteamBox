@@ -13,7 +13,7 @@ Upload notification:
 
 ### To install:
 
-* Install [pspuground's apk](http://forum.xda-developers.com/showthread.php?t=935157).
+* Install [pspunderground's apk](http://forum.xda-developers.com/showthread.php?t=935157).
 * rename `/sdcard/paw/html` (to keep it as a backup) and use the `html` from here instead.
 
 The main [changes](https://github.com/thedod/SteamBox/commit/32e3c4ed99b49748fa19b07f52309f2606c0fd45) are in html/css: I kinda envy those shiny black lunchboxes, but it
