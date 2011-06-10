@@ -9,7 +9,7 @@ type = (String) request.headers.get("content-type");
 
 success = false;
 
-if (type != null &&type.startsWith("multipart/form-data")) {
+if (type != null && type.startsWith("multipart/form-data")) {
 	try {
 		// Create output directory if it does not exist
 		if(!new File(outDir).exists()) {
@@ -40,6 +40,8 @@ if (type != null &&type.startsWith("multipart/form-data")) {
 		     if(filename.length() > 0) {
 			files.add(filename);
 			multipartStream.readBodyData(new FileOutputStream(outDir + "/" + filename));
+			//speak(filename,new Locale("en","EN"));
+                        showNotification(filename,"PirateBox upload",filename);
 			uploadedFiles++;
 		     }
                      else {
@@ -64,29 +66,29 @@ if (type != null &&type.startsWith("multipart/form-data")) {
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>PirateBox</title>
+<title>PirateBox - file uploaded</title>
 <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-<div style="height: 5%;"></div>
 <div>
 <center><bsh>print((success ? "File received!" : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.html">Send another file</a></center> 
 </div>
-<div style="height: 10%;"></div>
-<center>
-<table>
+<center> 
+<h1><script type="text/javascript">document.write(location.host)</script></h1>
+ <table cellpadding="2">
 <tr>
 <td>
-<img src="images/piratebox-logo.png"  alt="PirateBox Logo" /> 
+<img src="images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png "  alt="SteamPunk PirateBox Logo" /> 
 </td>
 <td>
-<b>1.</b> Learn more about the<br>project <a href="about.html">here</a>.<br><br>
-<b>2.</b> Click above to begin<br>sharing.<br><br>
-<b>3.</b> Browse and download<br>files <a href="list.xhtml">here</a>.<br><br>
+<a href="list.xhtml"><img src="images/loot.png" alt="Loot" border="0" width="150" height="66"><br><br>
+<a href="about.html"><img src="images/aboot.png" alt="Aboot" border="0" width="150" height="66"><br><br>
 </td> 
 </tr>
 </table>
-</center>
+ SteamBox skin: tribute to
+http://GirlGeniusOnline.com<br>
+and http://Lord-Vincent.DeviantArt.com 
+</center> 
 </body>
 </html>
-

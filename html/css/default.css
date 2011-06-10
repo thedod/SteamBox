@@ -1,0 +1,5 @@
+body {background: #fafafa url('../images/girlgenius-dirigible-tile.png')}
+a:link, a:visited { color: #753; text-decoration:none; font-weight:bold }
+a:hover { color: #000 }
+a:focus, a:active { outline: 0 }
+
