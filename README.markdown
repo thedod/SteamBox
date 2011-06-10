@@ -1,4 +1,4 @@
-## ![Logo](https://github.com/thedod/SteamBox/raw/master/html/images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png) SteamBox - SteamPunk Android PirateBox
+## SteamBox - a SteamPunk Android PirateBox theme
 
 Screen shot:
 <a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png" alt="Screenshot"></a>
