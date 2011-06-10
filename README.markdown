@@ -1,0 +1,28 @@
+## ![Logo](https://github.com/thedod/SteamBox/raw/master/html/images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png) SteamBox - SteamPunk Android PirateBox
+
+Screen shot:
+<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png" alt="Screenshot"></a>
+Upload notification:
+<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.png"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.png" alt="Upload notification"></a>
+
+* [PirateBox](http://wiki.daviddarts.com/PirateBox) by _David Darts_ is both useful and damn fine looking.
+
+* _pspunderground_ has [ported it to android](http://forum.xda-developers.com/showthread.php?t=935157) (based on _Jochen Ruehl's_ [PAW](http://paw-android.fun2code.de/) beanshell-powered web server).
+
+* **SteamBox** is a theme for that project.
+
+### To install:
+
+* Install [pspuground's apk](http://forum.xda-developers.com/showthread.php?t=935157).
+* rename `/sdcard/paw/html` (to keep it as a backup) and use the `html` from here instead.
+
+The main changes are in html/css: I kinda envy those shiny black lunchboxes, but it
+would be daft to build one for my personal phone, so at least I can give it a [relatively]
+spiffy html look and feel like an "armchair maker" ;).
+
+PAW is easy to tinker with and has good droid integration. So far - I've added a single feature: 
+you get a notification when a file is uploaded.
+
+I might add chat (maybe not exactly like the lunchbox version), text-to-speech shoutouts, and other schticks later on.
+
+It's a fun project
