@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>PirateBox</title>
+<link rel="stylesheet" href="css/default.css">
+
+<script type="text/javascript">
+function submitForm() {
+	document.getElementById("upload_form").style.display = 'none';
+	document.getElementById("upload_anim").style.display = 'block';
+	return true;
+}
+
+</script>
+</head>
+<body background="#fafafa">
+<div style="height: 5%;"></div>
+<form id="upload_form" action="pb.xhtml" onSubmit="submitForm();"; method="post" enctype="multipart/form-data" >
+<center><input name="upfile1" type="file">&nbsp;<input value="Send" type="submit"></center>
+</form>
+<div id="upload_anim" style="display: none;">
+<center>Sending&nbsp;&nbsp;&nbsp;<img src="images/ajax-loader.gif"  alt="Loader" /></center> 
+</div>
+<div style="height: 10%;"></div>
+<center>
+<table>
+<tr>
+<td>
+<img src="images/piratebox-logo.png"  alt="PirateBox Logo" /> 
+</td>
+<td>
+<b>1.</b> Learn more about the<br>project <a href="about.html">here</a>.<br><br>
+<b>2.</b> Click above to begin<br>sharing.<br><br>
+<b>3.</b> Browse and download<br>files <a href="list.xhtml">here</a>.<br><br>
+</td> 
+</tr>
+</table>
+</center>
+</body>
+</html>

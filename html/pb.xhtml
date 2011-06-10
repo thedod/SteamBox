@@ -1,0 +1,92 @@
+<bsh>
+import org.paw.util.*;
+import org.apache.commons.fileupload.*;
+import org.json.*;
+
+outDir = "/sdcard/piratebox";
+files = new ArrayList();
+type = (String) request.headers.get("content-type");
+
+success = false;
+
+if (type != null &&type.startsWith("multipart/form-data")) {
+	try {
+		// Create output directory if it does not exist
+		if(!new File(outDir).exists()) {
+			new File(outDir).mkdirs();
+		}
+
+		// Get the boundary string
+		boundaryIndex = type.indexOf("boundary=");
+		byte[] boundary = (type.substring(boundaryIndex + 9)).getBytes();
+
+		// Construct a MultiPartStream with request.in as InputStream
+		MultipartStream multipartStream =  new MultipartStream(request.in, boundary);
+		boolean nextPart = multipartStream.skipPreamble();
+
+		uploadedFiles = 0;
+
+		// Loop through all parts
+		while(nextPart) {
+		  headers = multipartStream.readHeaders();
+
+		  // If part is a file, save it to disk. Otherwise skip it.
+		  if(headers.contains("filename=\"")) {
+		     // Get filename
+		     filename = headers.substring(headers.indexOf("filename=") + 10);
+		     filename = filename.substring(0, filename.indexOf("\""));
+
+		     // If filename is not empty save content to filesystem
+		     if(filename.length() > 0) {
+			files.add(filename);
+			multipartStream.readBodyData(new FileOutputStream(outDir + "/" + filename));
+			uploadedFiles++;
+		     }
+                     else {
+			multipartStream.discardBodyData();  
+		     }
+		  }
+		  else {
+		     multipartStream.discardBodyData();
+		  }
+
+		  nextPart = multipartStream.readBoundary();
+		}
+		success = uploadedFiles > 0 ? true : false;
+	}
+	catch(e) {
+		success = false;
+	}
+	
+}
+</bsh>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>PirateBox</title>
+<link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+<div style="height: 5%;"></div>
+<div>
+<center><bsh>print((success ? "File received!" : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.html">Send another file</a></center> 
+</div>
+<div style="height: 10%;"></div>
+<center>
+<table>
+<tr>
+<td>
+<img src="images/piratebox-logo.png"  alt="PirateBox Logo" /> 
+</td>
+<td>
+<b>1.</b> Learn more about the<br>project <a href="about.html">here</a>.<br><br>
+<b>2.</b> Click above to begin<br>sharing.<br><br>
+<b>3.</b> Browse and download<br>files <a href="list.xhtml">here</a>.<br><br>
+</td> 
+</tr>
+</table>
+</center>
+</body>
+</html>
+

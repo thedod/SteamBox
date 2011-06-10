@@ -1,0 +1,23 @@
+<htlm>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Filelist</title>
+</head>
+<body background="#fafafa">
+<input type=button value="Back to Menu" onClick="self.location='index.html'">
+<hr />
+<ul>
+<bsh>
+import 	android.net.Uri;
+
+dir = "/sdcard/piratebox";
+File[] files = new File("/sdcard/piratebox").listFiles();
+Arrays.sort(files);
+for(File f : files) {
+	print("<li><a href='get_file.xhtml?file=" + Uri.encode(f.getName(), null) + "'>" + f.getName() + "</a></li>");
+}
+</bsh>
+</ul>
+<hr />
+</body>
+</html>
