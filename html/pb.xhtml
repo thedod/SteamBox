@@ -40,8 +40,16 @@ if (type != null && type.startsWith("multipart/form-data")) {
 		     if(filename.length() > 0) {
 			files.add(filename);
 			multipartStream.readBodyData(new FileOutputStream(outDir + "/" + filename));
-			//speak(filename,new Locale("en","EN"));
-                        showNotification(filename,"PirateBox upload",filename);
+			notificationId = serverGet("pb_notification");
+                        if (notificationId == null) {
+				notificationId = new Random().nextInt(1000);
+				serverPut("pb_notification",notificationId);
+			} else {
+				try {
+					cancelNotification(notificationId);
+				} catch(e) {}
+                        }
+			showNotification(com.android.internal.R.drawable.ic_menu_notifications, filename, "PirateBox upload", "Uploaded " + filename, notificationId, true, "#FF7F3F", false, true);                        
 			uploadedFiles++;
 		     }
                      else {
@@ -59,7 +67,6 @@ if (type != null && type.startsWith("multipart/form-data")) {
 	catch(e) {
 		success = false;
 	}
-	
 }
 </bsh>
 
@@ -71,19 +78,41 @@ if (type != null && type.startsWith("multipart/form-data")) {
 </head>
 <body>
 <div>
-<center><bsh>print((success ? "File received!" : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.html">Send another file</a></center> 
+<center><bsh>print((success ? "File received!" : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.xhtml">Send another file</a></center> 
 </div>
 <center> 
 <h1><script type="text/javascript">document.write(location.protocol+'//'+location.host)</script></h1>
- <table cellpadding="2">
+<table cellpadding="2">
+
 <tr>
-<td>
-<img src="images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png "  alt="SteamPunk PirateBox Logo" /> 
+<td align="left">
+<img src="images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png"  alt="SteamPunk PirateBox Logo" /> 
 </td>
-<td>
+<td align="right">
 <a href="list.xhtml"><img src="images/loot.png" alt="Loot" border="0" width="150" height="66"><br><br>
 <a href="about.html"><img src="images/aboot.png" alt="Aboot" border="0" width="150" height="66"><br><br>
 </td> 
+</tr>
+<tr>
+<td colspan="2" align="center">
+<strong><bsh>print(filename == null ? "Latest gossip o' th' high seas" : "Share th' joy wi' yer mates")</bsh></strong> <button onclick="location='index.xhtml'">Aft t'mainland</button>
+<form id="shoutform" action="index.xhtml" method="post" style="background:black url('images/girlgenius-heart-gear-tile.png'); padding:2px;">
+<bsh>
+    shout = filename;
+    if (shout == null) {
+        shout = serverGet("pb_shout");
+    } else {
+        shout = "uploaded "+shout;
+    }
+    if (shout == null) {
+        shout = "Gather round mateys, fer yer share o' shiny loot";
+    }
+    shout = shout.replace("\"","&quot;");
+    print("<input id=\"shout\" style=\"width:100%\" name=\"shout\" onfocus=\"this.select()\" value=\""+shout+"\"/>");
+</bsh>
+<button>Spread th' word, shipmate</button>
+</form>
+</td>
 </tr>
 </table>
  SteamBox skin: tribute to

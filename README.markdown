@@ -17,15 +17,11 @@ Upload notification:
 * Install [pspunderground's apk](http://forum.xda-developers.com/showthread.php?t=935157).
 * rename `/sdcard/paw/html` (to keep it as a backup) and use the `html` folder from SteamBox instead.
 
-Easy
+### Features:
 
-The main [changes](https://github.com/thedod/SteamBox/commit/32e3c4ed99b49748fa19b07f52309f2606c0fd45) are in html/css: I kinda envy those shiny black lunchboxes, but it
-would be daft to build one for my personal phone, so at least I can give it a [relatively]
-spiffy html look and feel like an "armchair maker" ;).
+* Original Android PirateBox functionality: upload/browse/download
+* Shoutbox (not a chat, but fun): 1-line history + text-to-speach
+* Upload notification to Android (discards old notifications to avoid clutter)
+* [Relatively] spiffy design :)
 
-PAW is easy to tinker with and has good droid integration. So far - I've added a single feature: 
-you get a notification when a file is uploaded.
-
-I might add chat (maybe not exactly like the lunchbox version), text-to-speech shoutouts, and other schticks later on.
-
-It's a fun project
+Enjoy it. Fork it. It's fun.
