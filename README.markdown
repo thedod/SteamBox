@@ -1,9 +1,9 @@
 ## SteamBox - a SteamPunk Android PirateBox theme
 
 Screen shot:
-<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.png" alt="Screenshot"></a>
+<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.jpg"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.jpg" alt="Screenshot"></a>
 Upload notification:
-<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.png"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.png" alt="Upload notification"></a>
+<a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.jpg"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.jpg" alt="Upload notification"></a>
 
 * [PirateBox](http://wiki.daviddarts.com/PirateBox) by _David Darts_ is both useful and damn fine looking.
 
