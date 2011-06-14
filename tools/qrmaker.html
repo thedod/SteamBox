@@ -1,0 +1,19 @@
+<html>
+ <head>
+  <title>SteamBox QR Code Generation (Google API)</title>
+ </head>
+ <body onload="document.getElementById('url').focus()">
+   <form action="http://chart.apis.google.com/chart">
+       <input type="hidden" name="cht" value="qr">
+       <input type="hidden" name="chs" value="100x100">
+       <label for="url">URL of your SteamBox</label>
+       <input id="url" name="chl" onfocus="this.select()">
+       <button>Create QR Code</button>
+   </form>
+To make the QR Code you get here appear in SteamBox, save it as<br>
+/sdcard/paw/html/qrdcodes/<code>&lt;protocol&gt;</code>-<code>&lt;ip&gt;</code>-<code>&lt;port&gt;</code>.png<br>
+For example:<br>
+/sdcard/paw/html/qrdcodes/https-192.168.1.23-4031.png
+ <body>
+ </body>
+</head>

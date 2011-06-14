@@ -83,18 +83,31 @@ if (type != null && type.startsWith("multipart/form-data")) {
 <center> 
 <h1><script type="text/javascript">document.write(location.protocol+'//'+location.host)</script></h1>
 <table cellpadding="2">
-
 <tr>
-<td align="left">
+<td rowspan="2" align="left" valign="bottom">
 <img src="images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png"  alt="SteamPunk PirateBox Logo" /> 
 </td>
-<td align="right">
-<a href="list.xhtml"><img src="images/loot.png" alt="Loot" border="0" width="150" height="66"><br><br>
-<a href="about.html"><img src="images/aboot.png" alt="Aboot" border="0" width="150" height="66"><br><br>
+<td rowspan="2" align="center" valign="center">
+<div id="qrdiv">
+<script type="text/javascript">
+function onNoQR(img) {
+  document.getElementById('qrdiv').style.display='none';
+  return true;
+}
+  document.write('<img width="100" height="100" src="qrcodes/'+(location.protocol+location.host).replace(/:/g,'-')+'.png" alt="" onerror="onNoQR(this)">');
+</script>
+</div>
+</td>
+<td align="right" valign="top">
+<a href="list.xhtml"><img src="images/loot.png" alt="Loot" border="0" width="150" height="66">
+</td>
+</tr>
+<td align="right" valign="bottom">
+<a href="about.html"><img src="images/aboot.png" alt="Aboot" border="0" width="150" height="66">
 </td> 
 </tr>
 <tr>
-<td colspan="2" align="center">
+<td colspan="3" align="center">
 <strong><bsh>print(filename == null ? "Latest gossip o' th' high seas" : "Share th' joy wi' yer mates")</bsh></strong> <button onclick="location='index.xhtml'">Aft t'mainland</button>
 <form id="shoutform" action="index.xhtml" method="post" style="background:black url('images/girlgenius-heart-gear-tile.png'); padding:2px;">
 <bsh>

@@ -1,5 +1,26 @@
-body {background: #fafafa url('../images/girlgenius-dirigible-tile.png')}
+body {background: #fed url('../images/girlgenius-dirigible-tile.png')}
 a:link, a:visited { color: #753; text-decoration:none; font-weight:bold }
 a:hover { color: #000 }
 a:focus, a:active { outline: 0 }
+#qrdiv {
+    padding:42px 23px;
+    background:url('../images/girlgenius-heart-gear-tile.png');
+    -moz-border-radius: 23px;
+    -webkit-border-radius: 23px;
+    -khtml-border-radius: 23px;
+    border-radius: 23px;
+    opacity:0.7;
+    border:inset #fc3 4px;
+
+}
+#shoutform {
+    background:black url('../images/girlgenius-heart-gear-tile.png');
+    padding:8px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    opacity:0.7;
+    border:inset #fc3 2px;
+}
 

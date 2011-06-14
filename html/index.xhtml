@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>PirateBox</title>
+<link rel="stylesheet" href="css/default.css">
+
+<script type="text/javascript">
+function submitForm() {
+	document.getElementById("upload_form").style.display = 'none';
+	document.getElementById("upload_anim").style.display = 'block';
+	return true;
+}
+
+</script>
+</head>
+<body>
+<form id="upload_form" action="pb.xhtml" onSubmit="submitForm();"; method="post" enctype="multipart/form-data" >
+<center>
+<strong>Share some bounty, matey:</strong><br/>
+<input name="upfile1" type="file">&nbsp;<input value="Send" type="submit"></center>
+</form>
+<div id="upload_anim" style="display: none;">
+<center>Sending&nbsp;&nbsp;&nbsp;<img src="images/gears.gif"  alt="Loader" /></center> 
+</div>
+<center>
+<h1><script type="text/javascript">document.write(location.protocol+'//'+location.host)</script></h1>
+
+<table cellpadding="2">
+<tr>
+<td rowspan="2" align="left" valign="bottom">
+<img src="images/piratebox-logo-steampunk_lord-vincent.deviantart.com.png"  alt="SteamPunk PirateBox Logo" /> 
+</td>
+<td rowspan="2" align="center" valign="center">
+<div id="qrdiv">
+<script type="text/javascript">
+function onNoQR(img) {
+  document.getElementById('qrdiv').style.display='none';
+  return true;
+}
+  document.write('<img width="100" height="100" src="qrcodes/'+(location.protocol+location.host).replace(/:/g,'-')+'.png" alt="" onerror="onNoQR(this)">');
+</script>
+</div>
+</td>
+<td align="right" valign="top">
+<a href="list.xhtml"><img src="images/loot.png" alt="Loot" border="0" width="150" height="66">
+</td>
+</tr>
+<td align="right" valign="bottom">
+<a href="about.html"><img src="images/aboot.png" alt="Aboot" border="0" width="150" height="66">
+</td> 
+</tr>
+<tr>
+<td colspan="3" align="center">
+<bsh>
+	newshout = parameters.get("shout");
+	if (newshout != null) {
+		speak(newshout, new Locale("en", "EN"));
+                serverPut("pb_shout",newshout);
+	}
+</bsh>
+<strong><bsh>print(newshout == null ? "Latest gossip o' th' high seas" : "Yer word be spread, sailor")</bsh></strong>
+<button onclick="location='index.xhtml'">Refresh</button>
+<form id="shoutform" action="index.xhtml" method="post">
+<bsh>
+	shout = serverGet("pb_shout");
+	if (shout == null) {
+		shout = "Gather round mateys, fer yer share o' shiny loot";
+	}
+	shout = shout.replace("\"","&quot;");
+	print("<input id=\"shout\" style=\"width:100%\" name=\"shout\" onfocus=\"this.select()\" value=\""+shout+"\"/>");
+</bsh>
+<button>Speak yer mind, swabbie buccanneer</button>
+</form>
+</td>
+</tr>
+</table>
+SteamBox skin: tribute to
+http://GirlGeniusOnline.com<br>
+and http://Lord-Vincent.DeviantArt.com 
+</center> 
+</body>
+</html>
