@@ -20,9 +20,9 @@ Upload notification:
 
 ----
 
-<img width="99" height="33" alt="lal" src="http://artlibre.org/wp-content/lal2.png" title="lal" class="alignnone size-full wp-image-632"> _PirateBox_ was created by <a href="http://daviddarts.com">David Darts</a> and is registered under thes
+<img width="99" height="33" alt="lal" src="http://artlibre.org/wp-content/lal2.png" title="lal" class="alignnone size-full wp-image-632"> _PirateBox_ was created by <a href="http://daviddarts.com">David Darts</a> and is registered under the
  <a href="http://artlibre.org/licence/lal/en">Free Art License (FAL 1.3)</a>.
-The Free Art License grants the right to freely copy, distribute, and transform creative works according to the principles of <a href="http://www.gnu.org/copyleft/copyleft.html">copyleft</a>. This lisence also applies to any derivative works including (but not limited to) _SteamBox_.
+The Free Art License grants the right to freely copy, distribute, and transform creative works according to the principles of <a href="http://www.gnu.org/copyleft/copyleft.html">copyleft</a>. This license also applies to any derivative works including (but not limited to) _SteamBox_.
 
 ----
 
