@@ -18,9 +18,13 @@ Upload notification:
 * Large url display + QR code to help others easily join the party.
 * [Relatively] spiffy design :)
 
+----
+
 <img width="99" height="33" alt="lal2" src="http://artlibre.org/wp-content/lal2.png" title="lal2" class="alignnone size-full wp-image-632"> _PirateBox_ was created by <a href="http://daviddarts.com">David Darts</a> and is registered under thes
  <a href="http://artlibre.org/licence/lal/en">Free Art License (FAL 1.3)</a>.
 The Free Art License grants the right to freely copy, distribute, and transform creative works according to the principles of <a href="http://www.gnu.org/copyleft/copyleft.html">copyleft</a>. This lisence also applies to any derivative works including (but not limited to) _SteamBox_.
+
+----
 
 ### To install:
 
