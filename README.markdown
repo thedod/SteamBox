@@ -18,11 +18,17 @@ Upload notification:
 * Large url display + QR code to help others easily join the party.
 * [Relatively] spiffy design :)
 
+<img width="99" height="33" alt="lal2" src="http://artlibre.org/wp-content/lal2.png" title="lal2" class="alignnone size-full wp-image-632"> _PirateBox_ was created by <a href="http://daviddarts.com">David Darts</a> and is registered under thes
+ <a href="http://artlibre.org/licence/lal/en">Free Art License (FAL 1.3)</a>.
+The Free Art License grants the right to freely copy, distribute, and transform creative works according to the principles of <a href="http://www.gnu.org/copyleft/copyleft.html">copyleft</a>. This lisence also applies to any derivative works including (but not limited to) _SteamBox_.
+
 ### To install:
 
-* [Download SteamBox](https://github.com/thedod/SteamBox/archives/master) (or clone/fork it).
 * Install [pspunderground's apk](http://forum.xda-developers.com/showthread.php?t=935157).
-* rename `/sdcard/paw/html` (to keep it as a backup) and use the `html` folder from SteamBox instead.
+\[[QR Code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=http%3A%2F%2Fforum.xda-developers.com%2Fattachment.php%3Fattachmentid%3D507382%26d%3D1296700316)].
+* [Download SteamBox](https://github.com/thedod/SteamBox/archives/master)
+\[[QR code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=https%3A%2F%2Fgithub.com%2Fthedod%2FSteamBox%2Fzipball%2Fmaster)].
+* Delete `/sdcard/paw/html` (or back it up), and use the `html` folder from the SteamBox archive instead.
 
 #### Why you sometimes don't see the QR code and how to fix this
 
