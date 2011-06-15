@@ -5,20 +5,31 @@
 <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-<input type=button value="Aft t'Mainland" onClick="self.location='index.xhtml'">
+<div align="center">
+	<a title="Refresh file list" href="list.xhtml"><img src="images/loot.png" alt="Refresh" border="0" width="150" height="66"></a><br>
+	<button onclick="self.location='index.xhtml'">Aft t'Mainland</button>
+</div>
 <hr />
 <ul>
 <bsh>
-import 	android.net.Uri;
-
+import android.net.Uri;
 dir = "/sdcard/piratebox";
 File[] files = new File("/sdcard/piratebox").listFiles();
 Arrays.sort(files);
+//Why doesn't *this* work? :(
+//import org.apache.commons.io;
+//Arrays.sort(files,LastModifiedFileComparator.LASTMODIFIED_REVERSE);
 for(File f : files) {
-	print("<li><a href='get_file.xhtml?file=" + Uri.encode(f.getName(), null) + "'>" + f.getName() + "</a></li>");
+	if (!f.getName().equals(".nomedia")) {
+		print("<li><a href='get_file.xhtml?file=" + Uri.encode(f.getName(), null) + "'>" + f.getName() + "</a></li>");
+	}
 }
 </bsh>
 </ul>
 <hr />
+<div align="center">
+	<button onclick="self.location='index.xhtml'">Aft t'Mainland</button>
+</div>
+
 </body>
 </html>

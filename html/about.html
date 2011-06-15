@@ -14,11 +14,11 @@ body {margin: 0; border: 0; padding: 0px; background-color: #fafafa;
 
      
      </head>
-     <!-- PirateBox - share freely       -->
+     <!-- PirateBox - share freely -->
      <body>
 <p>
 
-<img src="images/piratebox-logo.png" />
+<a href="index.xhtml"><img iborder="0" src="images/piratebox-logo.png"></a>
 
 <p>
 
@@ -27,19 +27,47 @@ body {margin: 0; border: 0; padding: 0px; background-color: #fafafa;
   <td width="75"><br></td>
   <td>Inspired by pirate radio and the free culture movment, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content. 
 <p>
-PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy. 
+PirateBox is designed to be safe and secure. No logins are required and no user data is logged.
+<em>The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy</em><a id="fn-connectivity" href="#connectivity"><strong>[*]</strong></a>.
 <p>
 PirateBox was created by David Darts and is registered under a Free Art License (2011). To learn more about the project or to find out how to build your own PirateBox system, please visit http://wiki.daviddarts.com/PirateBox
+<p>
+SteamBox is one of the attempts to port PirateBox to Android. See https://github.com/thedod/SteamBox.
+
+<p align="center">
+	<button onclick="self.location='index.xhtml'">Aft t'Mainland</button>
+</p>
+
+<hr>
+
+<dl><dt><a id="connectivity" href="#fn-connectivity"><strong>[*]</strong></a> Internet connectivity (and other threats):</dt><dd>
+<p>As opposed to David Dart's standalone <em>PirateBox</em>, the admin of an Android based PirateBox (i.e. the phone's owner) may decide to use it as a file-exchange utility
+<em>on an existing wifi network</em> (work, friend's home, etc.).</p>
+<p>
+Even when the phone is used as a portable hotspot, it may still be connected to cellular internet (and would most probably provide it to the users). This configuration is useful in rural areas, trains, etc. and IMHO - the question whether we're online or not is a minor one compared to other threats:
+<ul>
+<li>A dishonest admin can add code to PirateBox that <em>does</em> log activity. Even a nice person with a droid can actually be an RIAA/MPAA/MAFIAA bounty hunter for all you know.</li>
+<li>People around you can sniff your activity. Especially at geek cons ;)
+</ul>
+</p>
+<p>The first problem can only be minimized by avoiding dubious admins (use your street wisdom).</p>
+<p>
+SSL can solve the second problem, as long as you check 2 things when your browser warns you about the SSL certificate:
+<ol>
+<li>If the certificate's common name is <em>fun2code</em>, it's the default key that comes with the distribution.
+<em>Everyone can obtain it</em>, so using it as an SSL key is useles.<br>
+In such a case you should even ask the admin to <em>switch to http</em> and avoid creating a dangerous false sense of security.</li>
+<li>To avoid man-in-the-middle attacks, you should verify the key's fingerprints with the admin, but <em>you shouldn't do this via the network</em>: The admin can show you the fingerprints on his/her phone's screen, hand them to you on a printed paper, etc.</li> 
+</ol>
+</p>
+</dd></dl>
 </td>
   <td width="25"><br></td>
 </tr>
 </table>
 
-
-<p>
-<form> 
-<input type=button 
-value="Aft t'Mainland"
-onClick="self.location='index.xhtml'">
-</form> 
+<p align="center">
+	<button onclick="self.location='index.xhtml'">Aft t'Mainland</button>
 </p>
+
+</body>
