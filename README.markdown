@@ -45,7 +45,7 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 
 * [Download SteamBox](https://github.com/thedod/SteamBox/archives/master)
   \[[QR code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=https%3A%2F%2Fgithub.com%2Fthedod%2FSteamBox%2Fzipball%2Fmaster)],
-  and extract the `html/` and `conf/` floders to `/sdcard/app/` (Overwriting existing content).
+  and extract the `html/` and `conf/` folders to `/sdcard/app/` (overwriting existing content).
 
 ### To start the Wi-Fi hotspot:
 
