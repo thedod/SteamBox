@@ -33,19 +33,17 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 
 * Install [PAW Server](http://paw-android.fun2code.de/).
 \[[QR Code](http://paw-android.fun2code.de/images/paw_android_qr_code.png)].
-
 * Run Paw, and let it extract the initial `/sdcard/paw/` folder. **Do not** press the "play" button to start the server yet.
-
-* Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
-
-  **This step is important. If you skip it, your phone can get owned** <a name="fn1ref" href="#fn1">[*]</a>.
-
-  Also note that whenever there's an upgrade to the PAW market app, it extracts a new version of
-  `/sdcard/paw/html/app/` the next time you run it. **You need to repeat this step after each upgrade of PAW**.
-
 * [Download SteamBox](https://github.com/thedod/SteamBox/archives/master)
   \[[QR code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=https%3A%2F%2Fgithub.com%2Fthedod%2FSteamBox%2Fzipball%2Fmaster)],
   and extract the `html/` and `conf/` folders to `/sdcard/app/` (overwriting existing content).
+* Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
+
+**The last step is important. If you skip it, your phone can get owned** <a name="fn1ref" href="#fn1">[*]</a>.
+
+Also note that whenever there's an upgrade of the PAW market app, it extracts a new version of
+`/sdcard/paw/html/app/` the next time you run it. **You need to repeat this step after each upgrade of PAW**.
+
 
 ### To start the Wi-Fi hotspot:
 
