@@ -59,11 +59,15 @@ Run the PAW app, press the "play" button, and it will tell you where to browse.
 
 ### Tips:
 
-* If you've configure the Wi-Fi hotspot as suggested, you can browse to `/qrhotspot.png` and show
+* If you've configured the Wi-Fi hotspot as suggested, you can browse to `/qrhotspot.png` and show
   it to people who want quick Wi-Fi setup.
 * After you upload the first file, the folder `/sdcard/piratebox` will be created.
   It's handy to have a desktop shortcut or something to it, so that you can clean up
   the mess there once in a while.
+* You can also run the app without setting the phone up as a Wi-Fi hotspot.
+  It won't be a PirateBox then, but it would still be convenient for file exchange
+  (much less of a hassle than blue-tooth). I do both. I hope I'm not breaking any
+  pirate rules by this :)
 
 ----
 
