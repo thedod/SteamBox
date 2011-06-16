@@ -33,7 +33,9 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 
 * Install [PAW Server](http://paw-android.fun2code.de/).
 \[[QR Code](http://paw-android.fun2code.de/images/paw_android_qr_code.png)].
+
 * Run Paw, and let it extract the initial `/sdcard/paw/` folder. **Do not** press the "play" button to start the server yet.
+
 * Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
 
   **This step is important. If you skip it, your phone can get owned** <a name="fn1ref" href="#fn1">[*]</a>.
