@@ -54,9 +54,8 @@ Even when the phone is used as a portable hotspot, it may still be connected to 
 <p>
 SSL can solve the second problem, as long as you check 2 things when your browser warns you about the SSL certificate:
 <ol>
-<li>If the certificate's common name is <em>fun2code</em>, it's the default key that comes with the distribution.
-<em>Everyone can obtain it</em>, so using it as an SSL key is useles.<br>
-In such a case you should even ask the admin to <em>switch to http</em> and avoid creating a dangerous false sense of security.</li>
+<li>If the server is using the SSL key that comes with the distribution (common name is <a target="_blank" href="/images/fun2code-cert.jpg">fun2code</a>), SSL's encryption is useless (since <em>everyone can obtain the key</em>).<br>
+In such a case you should even ask the admin to <em>switch to http</em> because a false sense of security is a dangerous thing.</li>
 <li>To avoid man-in-the-middle attacks, you should verify the key's fingerprints with the admin, but <em>you shouldn't do this via the network</em>: The admin can show you the fingerprints on his/her phone's screen, hand them to you on a printed paper, etc.</li> 
 </ol>
 </p>
