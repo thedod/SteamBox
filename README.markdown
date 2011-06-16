@@ -36,7 +36,7 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 * Run Paw, and let it extract the initial `/sdcard/paw/` folder. **Do not** press the "play" button to start the server yet.
 * Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
 
-  **This step is important. If you skip it, your phone can get owned** <a id="fn1ref" href="#fn1">[*]</a>.
+  **This step is important. If you skip it, your phone can get owned** <a name="fn1ref" href="#fn1">[*]</a>.
 
   Also note that whenever there's an upgrade to the PAW market app, it extracts a new version of
   `/sdcard/paw/html/app/` the next time you run it. **You need to repeat this step after each upgrade of PAW**.
@@ -113,7 +113,7 @@ All in all - unless it's a small group of technically skilled people - you're be
 
 ----
 
-<a id="fn1" href="#fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
+<a name="fn1" href="#fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
 it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
 
 ----
