@@ -67,12 +67,7 @@ Run the PAW app, press the "play" button, and it will tell you where to browse.
 
 ----
 
-<a id="fn1" href="fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
-it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
-
-----
-
-#### Advanced:
+### Advanced:
 
 #### Why you sometimes don't see the frame with the QR code, and how to fix this
 
@@ -115,6 +110,11 @@ that _you only have one copy and you need it back_. If there are several copies 
 waiting to happen.
 
 All in all - unless it's a small group of technically skilled people - you're better of with plain http :)
+
+----
+
+<a id="fn1" href="fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
+it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
 
 ----
 
