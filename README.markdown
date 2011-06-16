@@ -39,7 +39,7 @@ The Free Art License grants the right to freely copy, distribute, and transform 
   and extract the `html/` and `conf/` folders to `/sdcard/app/` (overwriting existing content).
 * Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
 
-**The last step is important. If you skip it, your phone can get owned** <a name="fn1ref" href="#fn1">[*]</a>.
+**The last step is important. If you skip it, you risk giving strangers complete control over your phone** <a name="fn1ref" href="#fn1">[*]</a>.
 
 Also note that whenever there's an upgrade of the PAW market app, it extracts a new version of
 `/sdcard/paw/html/app/` the next time you run it. **You need to repeat this step after each upgrade of PAW**.
