@@ -54,7 +54,7 @@ function onNoQR(img) {
 <bsh>
 	newshout = parameters.get("shout");
 	if (newshout != null) {
-		speak(newshout, new Locale("en", "EN"));
+		speak(newshout.replaceAll("[^a-zA-Z0-9]"," "), new Locale("en", "EN"));
                 serverPut("pb_shout",newshout);
 	}
 </bsh>
