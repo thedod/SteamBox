@@ -63,6 +63,10 @@ Run the PAW app, press the "play" button, and it will tell you where to browse.
 
 ----
 
+#### Enjoy it. Skin it. It's fun.
+
+----
+
 ### Advanced:
 
 #### Why you sometimes don't see the frame with the QR code, and how to fix this
@@ -109,4 +113,3 @@ waiting to happen.
 
 All in all - unless it's a small group of technically skilled people - you're better of with plain http :)
 
-#### Enjoy it. Skin it. It's fun.
