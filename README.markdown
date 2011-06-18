@@ -7,11 +7,10 @@ Upload notification:
 
 * [PirateBox](http://wiki.daviddarts.com/PirateBox) by _David Darts_ is both useful and damn fine looking.
 * _pspunderground_ has [sorta] [ported it to android](http://forum.xda-developers.com/showthread.php?t=935157) (based on _Jochen Ruehl's_ [PAW](http://paw-android.fun2code.de/) beanshell-powered web server).
-* **SteamBox** is a theme for that project.
+* **SteamBox** is a theme for that project that doesn't require a rooted phone (can't serve on port 80, tough).
 
 ### Features:
 
-* Works on non rooted phones (can't serve on port 80, tough)
 * Original Android PirateBox functionality: upload/browse/download
 * Shoutbox (no chat yet) - change a single-line global message. It also gets spoken as text to speech
   (which is fun if the droid is connected to an amp and playing music - try it)
@@ -34,16 +33,9 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 * Install [PAW Server](http://paw-android.fun2code.de/).
 \[[QR Code](http://paw-android.fun2code.de/images/paw_android_qr_code.png)].
 * Run Paw, and let it extract the initial `/sdcard/paw/` folder. **Do not** press the "play" button to start the server yet.
-* Move the folder `/sdcard/paw/html/app/` outside of the web-accessible `html/` folder (e.g. to `/sdcard/paw/`).
-
-  **This step is important. If you skip it, your phone can get owned** <a id="fn1ref" href="fn1">[*]</a>.
-
-  Also note that whenever there's an upgrade to the PAW market app, it extracts a new version of
-  `/sdcard/paw/html/app/` the next time you run it. **You need to repeat this step after each upgrade of PAW**.
-
 * [Download SteamBox](https://github.com/thedod/SteamBox/archives/master)
   \[[QR code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=https%3A%2F%2Fgithub.com%2Fthedod%2FSteamBox%2Fzipball%2Fmaster)],
-  and extract the `html/` and `conf/` floders to `/sdcard/app/` (Overwriting existing content).
+  and extract the `SteamBox/` and `conf/` floders to `/sdcard/app/` (Overwriting existing content at `conf/`).
 
 ### To start the Wi-Fi hotspot:
 
@@ -61,16 +53,9 @@ Run the PAW app, press the "play" button, and it will tell you where to browse.
 
 * If you've configure the Wi-Fi hotspot as suggested, you can browse to `/qrhotspot.png` and show
   it to people who want quick Wi-Fi setup.
-* After you upload the first file, the folder `/sdcard/piratebox` will be created.
-  It's handy to have a desktop shortcut or something to it, so that you can clean up
+* After you upload the first file, the folder `/sdcard/piratebox/` will be created.
+  It's handy to have a shortcut to it on your phone, so that you can clean up
   the mess there once in a while.
-
-----
-
-<a id="fn1" href="fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
-it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
-
-----
 
 #### Advanced:
 
