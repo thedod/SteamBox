@@ -51,18 +51,24 @@ Run the PAW app, press the "play" button, and it will tell you where to browse.
 
 ### Tips:
 
-* If you've configure the Wi-Fi hotspot as suggested, you can browse to `/qrhotspot.png` and show
+* If you've configured the Wi-Fi hotspot as suggested, you can browse to `/qrhotspot.png` and show
   it to people who want quick Wi-Fi setup.
 * After you upload the first file, the folder `/sdcard/piratebox/` will be created.
   It's handy to have a shortcut to it on your phone, so that you can clean up
   the mess there once in a while.
+* You can also run the app without setting the phone up as a Wi-Fi hotspot.
+  It won't be a PirateBox then, but it would still be convenient for file exchange
+  (much less of a hassle than blue-tooth). I do both. I hope I'm not breaking any
+  pirate rules by this :)
 
-#### Advanced:
+----
+
+### Advanced:
 
 #### Why you sometimes don't see the frame with the QR code, and how to fix this
 
 SteamBox doesn't _generate_ QR codes by itself [at least not yet]. It's actually a simple JS "cheat":
-The page tries to lookup the [pregenerated] image `/sdcard/paw/html/qrdcodes/`protocol`-`ip`-`port`.png`
+The page tries to lookup the [pregenerated] image `/sdcard/paw/SteamBox/qrdcodes/`protocol`-`ip`-`port`.png`
 
 For example: `http-192.168.1.23-8080.png` is expected to contain a 100x100 pixel QR code for `http://192.168.1.23:8080`.
 
@@ -92,7 +98,7 @@ and use the form to manually generate the QR Code you need via google API.
 * At `/sdcard/paw/conf/`, copy `4031/server.xml` to `server.xml` (overwriting it. There's a copy
   of it at `8088/server.xml` if you want to go back to http).
 * Start the server and connect to it (https on port 4031). You'll get the certificate warning,
-  and should see the details of your key (not the default [fun2code](https://github.com/thedod/SteamBox/raw/master/html/images/fun2code-cert.jpg) one).
+  and should see the details of your key (not the default [fun2code](https://github.com/thedod/SteamBox/raw/master/SteamBox/images/fun2code-cert.jpg) one).
 
 To avoid [man-in-the-middle attacks](https://secure.wikimedia.org/wikipedia/en/wiki/Man-in-the-middle_attack), you should
 keep the fingerprints of your key in a text file on your phone. It's also handy to have it on paper, but make it a point
@@ -100,6 +106,11 @@ that _you only have one copy and you need it back_. If there are several copies 
 waiting to happen.
 
 All in all - unless it's a small group of technically skilled people - you're better of with plain http :)
+
+----
+
+<a name="fn1" href="#fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
+it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
 
 ----
 
