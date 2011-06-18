@@ -12,7 +12,7 @@ Upload notification:
 ### Features:
 
 * Original Android PirateBox functionality: upload/browse/download
-* Shoutbox (no chat yet) - change a single-line global message. It also gets spoken as text to speech
+* Shoutbox (no chat yet) - change a single-line global message. Optional text to speech
   (which is fun if the droid is connected to an amp and playing music - try it)
 * Notification when file is uploaded (vibration, no sound, see above why)
 * Large url display + QR code to help others easily join the pirate party
