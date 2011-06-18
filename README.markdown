@@ -100,6 +100,8 @@ and use the form to manually generate the QR Code you need via google API.
 * Start the server and connect to it (https on port 4031). You'll get the certificate warning,
   and should see the details of your key (not the default [fun2code](https://github.com/thedod/SteamBox/raw/master/SteamBox/images/fun2code-cert.jpg) one).
 
+**Note:** Each time _Paw server_ app gets upgraded (e.g. from the market), it overwrites `/sdcard/paw/conf/certs/pawKeystore` the next time it runs and you need to replace it with your own key again.
+
 To avoid [man-in-the-middle attacks](https://secure.wikimedia.org/wikipedia/en/wiki/Man-in-the-middle_attack), you should
 keep the fingerprints of your key in a text file on your phone. It's also handy to have it on paper, but make it a point
 that _you only have one copy and you need it back_. If there are several copies running around at a party, it's switcheroo
