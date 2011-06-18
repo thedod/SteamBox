@@ -1,3 +1,15 @@
+<bsh>
+	newshout = parameters.get("shout");
+	if (newshout != null) {
+                shoutfile = new FileWriter("/sdcard/paw/SteamBox/shoutbox.txt");
+                shoutfile.write(newshout);
+                shoutfile.close();
+                if (parameters.get("speech") != null) {
+		    speak(newshout.replaceAll("[^a-zA-Z0-9]"," "), new Locale("en", "EN"));
+                }
+		request.redirect("index.xhtml",null);
+	}
+</bsh>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -13,10 +25,10 @@ function submitForm() {
 
 </script>
 </head>
-<body>
+<body onload="document.getElementById('shout').focus()">
 <form id="upload_form" action="pb.xhtml" onSubmit="submitForm();"; method="post" enctype="multipart/form-data" >
 <center>
-<strong>Share some bounty, matey:</strong><br/>
+<strong>Share something shiny, swashbuckler:</strong><br/>
 <input name="upfile1" type="file">&nbsp;<input value="Send" type="submit"></center>
 </form>
 <div id="upload_anim" style="display: none;">
@@ -51,25 +63,16 @@ function onNoQR(img) {
 </tr>
 <tr>
 <td colspan="3" align="center">
-<bsh>
-	newshout = parameters.get("shout");
-	if (newshout != null) {
-		speak(newshout.replaceAll("[^a-zA-Z0-9]"," "), new Locale("en", "EN"));
-                serverPut("pb_shout",newshout);
-	}
-</bsh>
-<strong><bsh>print(newshout == null ? "Latest gossip o' th' high seas" : "Yer word be spread, sailor")</bsh></strong>
-<button onclick="location='index.xhtml'">Refresh</button>
+
 <form id="shoutform" action="index.xhtml" method="post">
-<bsh>
-	shout = serverGet("pb_shout");
-	if (shout == null) {
-		shout = "Gather round mateys, fer yer share o' shiny loot";
-	}
-	shout = shout.replace("\"","&quot;");
-	print("<input id=\"shout\" style=\"width:100%\" name=\"shout\" onfocus=\"this.select()\" value=\""+shout+"\"/>");
-</bsh>
+<iframe id="shoutbox" src="shoutbox.txt"></iframe>
+<script type="text/javascript">
+    shout_timer = setInterval("document.getElementById('shoutbox').contentDocument.location.reload(true)",8000);
+</script>
+<input id="shout" name="shout" onfocus="this.select()" value="">
 <button>Speak yer mind, swabbie buccanneer</button>
+<input type="checkbox" id="speech" name="speech">
+<label for="speech">Aloud</label>
 </form>
 </td>
 </tr>

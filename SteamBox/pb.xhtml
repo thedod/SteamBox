@@ -79,9 +79,9 @@ if (type != null && type.startsWith("multipart/form-data")) {
 <title>PirateBox - file uploaded</title>
 <link rel="stylesheet" href="css/default.css">
 </head>
-<body>
+<body onload="document.getElementById('shout').focus()">
 <div>
-<center><bsh>print((success ? "Shiny file. Bless you!" : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.xhtml">Send another file</a></center> 
+<center><bsh>print((success ? "Shiny indeed. Blessed be ye." : "<span style='color: red;'>Upload failed!</span>"));</bsh>&nbsp;&nbsp;&nbsp;<a href="index.xhtml">Send another file</a></center> 
 </div>
 <center> 
 <h1><script type="text/javascript">document.write(location.protocol+'//'+location.host)</script></h1>
@@ -111,8 +111,11 @@ function onNoQR(img) {
 </tr>
 <tr>
 <td colspan="3" align="center">
-<strong><bsh>print(filename == null ? "Latest gossip o' th' high seas" : "Share th' joy wi' yer mates")</bsh></strong> <button onclick="location='index.xhtml'">Aft t'mainland</button>
-<form id="shoutform" action="index.xhtml" method="post" style="background:black url('images/girlgenius-heart-gear-tile.png'); padding:2px;">
+<form id="shoutform" action="index.xhtml" method="post">
+<iframe id="shoutbox" src="shoutbox.txt"></iframe>
+<script type="text/javascript">
+    shout_timer = setInterval("document.getElementById('shoutbox').contentDocument.location.reload(true)",8000);
+</script>
 <bsh>
     shout = filename;
     if (shout == null) {
@@ -121,12 +124,14 @@ function onNoQR(img) {
         shout = "uploaded "+shout;
     }
     if (shout == null) {
-        shout = "Gather round mateys, fer yer share o' shiny loot";
+        shout = "";
     }
     shout = shout.replace("\"","&quot;");
     print("<input id=\"shout\" style=\"width:100%\" name=\"shout\" onfocus=\"this.select()\" value=\""+shout+"\"/>");
 </bsh>
 <button>Spread th' word, shipmate</button>
+<input type="checkbox" id="speech" name="speech">
+<label for="speech">Aloud</label>
 </form>
 </td>
 </tr>
