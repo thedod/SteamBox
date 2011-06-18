@@ -35,7 +35,7 @@ The Free Art License grants the right to freely copy, distribute, and transform 
 * Run Paw, and let it extract the initial `/sdcard/paw/` folder. **Do not** press the "play" button to start the server yet.
 * [Download SteamBox](https://github.com/thedod/SteamBox/archives/master)
   \[[QR code](http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=https%3A%2F%2Fgithub.com%2Fthedod%2FSteamBox%2Fzipball%2Fmaster)],
-  and extract the `SteamBox/` and `conf/` floders to `/sdcard/app/` (Overwriting existing content at `conf/`).
+  and extract the `SteamBox/` and `conf/` folders to `/sdcard/app/` (Overwriting existing content at `conf/`).
 
 ### To start the Wi-Fi hotspot:
 
