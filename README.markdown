@@ -7,7 +7,7 @@ Upload notification:
 
 * [PirateBox](http://wiki.daviddarts.com/PirateBox) by _David Darts_ is both useful and damn fine looking.
 * _pspunderground_ has [sorta] [ported it to android](http://forum.xda-developers.com/showthread.php?t=935157) (based on _Jochen Ruehl's_ [PAW](http://paw-android.fun2code.de/) beanshell-powered web server).
-* **SteamBox** is a theme for that project that doesn't require a rooted phone (can't serve on port 80, tough).
+* **SteamBox** is a SteamPunk theme for that project that doesn't require a rooted phone (can't serve on port 80, tough).
 
 ### Features:
 
@@ -108,12 +108,5 @@ that _you only have one copy and you need it back_. If there are several copies 
 waiting to happen.
 
 All in all - unless it's a small group of technically skilled people - you're better of with plain http :)
-
-----
-
-<a name="fn1" href="#fn1ref">[*]</a> Later on - you can try `/app/`, but you should do this at home, where _you trust everyone who has Wi-Fi access_ and the network is WPA protected. `/app/` is a powerful Swiss-army-knife-droid-control-panel, and a great development aid too. Its goal is to be as powerful and friendly as possible, but
-it wasn't designed for scenarios when there are strangers on the network (which is what PirateBox is all about).
-
-----
 
 #### Enjoy it. Skin it. It's fun.
