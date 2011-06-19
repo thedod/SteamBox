@@ -26,7 +26,7 @@ function submitForm() {
 
 </script>
 </head>
-<body onload="document.getElementById('shout').focus()">
+<body onload="{document.getElementById('shout').focus();refresShoutbox();}">
 <form id="upload_form" action="pb.xhtml" onSubmit="submitForm();"; method="post" enctype="multipart/form-data" >
 <center>
 <strong>Share something shiny, swashbuckler:</strong><br/>
@@ -68,12 +68,13 @@ function onNoQR(img) {
 <form id="shoutform" action="index.xhtml" method="post">
 <iframe id="shoutbox" src="shoutbox.txt"></iframe>
 <script type="text/javascript">
-    shout_timer = setInterval("document.getElementById('shoutbox').contentDocument.location.reload(true)",8000);
+    function refresShoutbox() { document.getElementById('shoutbox').contentDocument.location.reload(true); }
+    shout_timer = setInterval("refresShoutbox()",8000);
 </script>
 <input id="shout" name="shout" onfocus="this.select()" value="">
-<button>Speak yer mind, swabbie buccanneer</button>
+<label for="speech"><a title="Text to speech"><img border="0" width="33" height="30" style="vertical-align:bottom;margin-top:4px" src="images/speak.png" alt="Sepaker"> Loudly</a></label>
 <input type="checkbox" id="speech" name="speech">
-<label for="speech">Aloud</label>
+<button>Speak yer mind, swabbie buccaneer</button>
 </form>
 </td>
 </tr>
