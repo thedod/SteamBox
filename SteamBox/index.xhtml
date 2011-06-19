@@ -5,7 +5,8 @@
                 shoutfile.write(newshout);
                 shoutfile.close();
                 if (parameters.get("speech") != null) {
-		    speak(newshout.replaceAll("[^a-zA-Z0-9]"," "), new Locale("en", "EN"));
+                    // avoid tiresome "undersore"s in the_artist_-_the_song.mp3 :)
+		    speak(newshout.replaceAll("[^a-zA-Z0-9',.]"," "), new Locale("en", "EN"));
                 }
 		request.redirect("index.xhtml",null);
 	}
