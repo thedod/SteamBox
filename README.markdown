@@ -1,8 +1,8 @@
-## SteamBox - a SteamPunk Android PirateBox theme
+## SteamBox - SteamPunk themed PirateBox clone for Android
 
-Screen shot:
+Screen shot (computer):
 <a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.jpg"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/Screenshot.jpg" alt="Screenshot"></a>
-Upload notification:
+Upload notification (phone):
 <a target="_blank" href="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.jpg"><img border="0" height="100" src="https://github.com/thedod/SteamBox/raw/master/gfx/upload-notification.jpg" alt="Upload notification"></a>
 
 * [PirateBox](http://wiki.daviddarts.com/PirateBox) by _David Darts_ is both useful and damn fine looking.
@@ -11,7 +11,7 @@ Upload notification:
 
 ### Features:
 
-* Original Android PirateBox functionality: upload/browse/download
+* Original [Android PirateBox](http://forum.xda-developers.com/showthread.php?t=935157) functionality: upload/browse/download
 * Shoutbox (no chat yet) - change a single-line global message. Optional text to speech
   (which is fun if the droid is connected to an amp and playing music - try it)
 * Notification when file is uploaded (vibration, no sound, see above why)
@@ -84,8 +84,8 @@ in an _existing Wi-Fi lan_ where your droid is at - say -
 `192.168.1.23` and SteamBox runs as `https` over port `4031`, out-of-the-box SteamBox won't find `https-192.168.1.23-4031.png`.
 
 You can easily generate a "SteamBox ready" QR code for your server: 
-Just open the file `tools/qrmaker.html` in your browser (from hard disk. no special voodoo required),
-and use the form to manually generate the QR Code you need via google API.
+Just extract the file `tools/qrmaker.html` and open it with your browser or html viewer.
+Read the instructions and use the form to manually generate the QR Code you need via google API.
 
 #### How to run PAW as an SSL server
 
